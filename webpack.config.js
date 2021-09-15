@@ -9,8 +9,16 @@ module.exports = {
     filename: 'index.[contenthash].js'
   },
   plugins: [new HtmlWebpackPlugin({
-    title: 'songsong',
+    title: '刘柏松- XDML',
     template: 'src/assets/index.html'
     
-  })]
-};
+  })],
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        },
+      ],
+    },
+  };
