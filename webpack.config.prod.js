@@ -7,6 +7,7 @@ module.exports = {
   ...base,
   mode: 'production',
   plugins: [
+    ...base.plugins,
        new MiniCssExtractPlugin({
     filename:'[name].[contenthash].css',
     chunkFilename:'[id].[contenthash].css',
